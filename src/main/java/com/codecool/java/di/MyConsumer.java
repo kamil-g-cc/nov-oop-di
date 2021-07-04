@@ -3,7 +3,7 @@ package com.codecool.java.di;
 public class MyConsumer {
     private EmailService email = null;
 
-    public void configure(EmailService srv){
+    public MyConsumer(EmailService srv){
         email = srv;
     }
     public void processMessages(String msg, String receiver){
