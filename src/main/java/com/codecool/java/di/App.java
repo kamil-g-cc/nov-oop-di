@@ -8,5 +8,8 @@ public class App {
         */
         EmailServiceInjector injector = new EmailServiceInjector();
         injector.getMessageServiceConsumer().processMessages("Hi, how are you?", "kamil@codecool.com");
+
+        SMSServiceInjector injectorSMS = new SMSServiceInjector();
+        injectorSMS.getMessageServiceConsumer().processMessages("Hi, this is SMS", "+48600099971");
     }
 }
