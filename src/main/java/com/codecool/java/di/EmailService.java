@@ -1,8 +1,8 @@
 package com.codecool.java.di;
 
-public class EmailService {
-    public void sendEmail(String message, String receiver){
-        //logic...
-        System.out.println("Sending e-mail to "+ receiver+ " with message = "+message);
+public class EmailService implements MessageService{
+    @Override
+    public void sendMessage(String msg, String receiver) {
+        System.out.println("Sending e-mail to "+ receiver+ " with message = "+msg);
     }
 }

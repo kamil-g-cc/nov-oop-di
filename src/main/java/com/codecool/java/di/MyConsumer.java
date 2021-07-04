@@ -1,13 +1,13 @@
 package com.codecool.java.di;
 
 public class MyConsumer {
-    private EmailService email = null;
+    private MessageService email = null;
 
-    public MyConsumer(EmailService srv){
+    public MyConsumer(MessageService srv){
         email = srv;
     }
     public void processMessages(String msg, String receiver){
         //logic for msg and receiver validation
-        email.sendEmail(msg, receiver);
+        email.sendMessage(msg, receiver);
     }
 }
